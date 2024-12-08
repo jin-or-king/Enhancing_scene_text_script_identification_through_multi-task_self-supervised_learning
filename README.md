@@ -1,0 +1,1 @@
+# Enhancing_scene_text_script_identification_through_multi-task_self-supervised_learning
