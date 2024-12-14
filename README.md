@@ -22,9 +22,8 @@ python mainSJR.py
 --base_lr 0.06
 --final_lr 0.0006
 --temperature 0.5
---use_fp16 false
 --dump_path checkpoints
---freeze_prototypes_niters 900'
+
 ```
 
 # Evaluating models
