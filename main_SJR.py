@@ -17,7 +17,7 @@ import torch.distributed as dist
 import torch.optim
 from src.utils import *
 from src.multicropdataset import MultiCropDataset
-import src.resnet50V11 as resnet_models
+import src.resnet50 as resnet_models
 
 logger = getLogger()
 
