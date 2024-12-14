@@ -6,7 +6,7 @@
 - CUDA 10.1
 - Other dependencies: scipy, pandas, numpy
 
-## training
+##Training
 Our modle is very simple to implement and experiment with.
 Our implementation consists in a [main_SJR.py](./main_SJR.py) file from which are imported the dataset definition [src/multicropdataset.py](./src/multicropdataset.py), the model architecture [src/resnet50.py](./src/resnet50.py) and some miscellaneous training utilities [src/utils.py](./src/utils.py).
 
