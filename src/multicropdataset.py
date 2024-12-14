@@ -1,10 +1,3 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-#
-
 from logging import getLogger
 
 import cv2
@@ -40,7 +33,7 @@ class MultiCropDataset(datasets.CIFAR10):
         color_transform = transforms.Compose([get_color_distortion(), RandomGaussianBlur()])
         mean = [0.485, 0.456, 0.406]
         std = [0.228, 0.224, 0.225]
-        # size_crops = 32裁切大小，nmb_crops = 2用同样的转换生成两幅图片
+
         for i in range(len(size_crops)):
             randomresizedcrop = transforms.RandomResizedCrop(
                 size_crops[i],
@@ -57,9 +50,9 @@ class MultiCropDataset(datasets.CIFAR10):
 
     def __getitem__(self, index):
         img = self.data[index]
-        # 将图像数组转换为PIL图像对象
+
         image = Image.fromarray(img)
-        # 对该图像应用所有预定义的图像转换（裁剪、颜色扭曲等）
+
         multi_crops = list(map(lambda trans: trans(image), self.trans))
 
         if self.return_index:
