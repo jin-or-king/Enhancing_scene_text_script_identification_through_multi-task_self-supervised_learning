@@ -48,9 +48,9 @@ class MyData(Dataset):
             image = random_augmentation(image)
         if not self.keep:
             if self.pad:
-                # 这行代码的实际作用是将原始图像 img 按比例调整大小以适应给定的高度 newh，并计算出新的宽度 neww。
+
                 image, _ = resize_h(image, newh=32)
-                # 原始图像 img 复制到一个新的大小为 (h, towidth, c) 的图像中，并将其水平居中
+
                 image = add_padding(image, self.tolength)
             else:
                 image = cv2.resize(image, (self.tolength, 32))
