@@ -26,7 +26,6 @@ python mainSJR.py
 
 ```
 
-# Evaluating models
 
 ## Evaluate models: Linear classification on SIW_13
 To train a supervised linear classifier on frozen features/weights, run:
