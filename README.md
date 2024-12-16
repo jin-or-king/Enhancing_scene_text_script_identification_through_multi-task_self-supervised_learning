@@ -39,5 +39,5 @@ python eval_linear.py
 --lr 0.03
 --epochs 400'
 ```
-
+It can also directly run the [run.py](./run.py)
 
